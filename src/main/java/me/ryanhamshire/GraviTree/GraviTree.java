@@ -112,7 +112,7 @@ public class GraviTree extends JavaPlugin implements Listener
 
         try
         {
-            new Metrics(this);
+            new Metrics(this, 24740);
         }
         catch (Throwable ignored){}
 	}
@@ -341,7 +341,7 @@ public class GraviTree extends JavaPlugin implements Listener
     private boolean blockIsRootType(Block block)
     {
         Material type = block.getType();
-        if(type == Material.DIRT || type == Material.GRASS || type == Material.STONE || type == Material.COBBLESTONE || ExtraTags.TERRACOTTA.isTagged(type) || type == Material.SAND)
+        if(type == Material.DIRT || type == Material.GRASS_BLOCK || type == Material.STONE || type == Material.COBBLESTONE || ExtraTags.TERRACOTTA.isTagged(type) || type == Material.SAND)
         {
             return true;
         }
@@ -397,7 +397,7 @@ public class GraviTree extends JavaPlugin implements Listener
     static boolean blockIsTreeAdjacent(Block block)
     {
         Material type = block.getType();
-        if(Tag.LEAVES.isTagged(type) || type == Material.AIR || type == Material.VINE || type == Material.COCOA || type == Material.TORCH || type == Material.SNOW || type == Material.GRASS || type == Material.DIRT || type == Material.STONE || type == Material.COBBLESTONE || type == Material.TALL_GRASS)
+        if(Tag.LEAVES.isTagged(type) || type == Material.AIR || type == Material.VINE || type == Material.COCOA || type == Material.TORCH || type == Material.SNOW || type == Material.GRASS_BLOCK || type == Material.DIRT || type == Material.STONE || type == Material.COBBLESTONE || type == Material.TALL_GRASS)
         {
             return true;
         }
